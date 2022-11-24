@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #ed331f;
+  background-color: #97f0e8;
+  text-align: center;
+  margin-top: 300px;
+  font-size: 35px;
+  font-weight: 800;
+}
