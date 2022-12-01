@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="mainBox">
+        <h1>Random Password Generator</h1>
+        <input id="input" />
+        <div class="btn">
+          <button class="btn1" id="btn1" onclick="PasswordGen()">
+            Generate
+          </button>
+          <button class="btn1" id="btn2" onclick="PasswordCopy()">Copy</button>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<!-- 
+const btn1 = document.getElementById("btn1");
+const btn2 = document.getElementById("btn2");
+
+function genPassword() {
+  const selection =
+    "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  let password = "";
+  let pass_length = 8;
+
+  for (let i = 0; i < pass_length; i++) {
+    let rand_val = Math.floor(Math.random() * (selection.length - 1));
+    password += selection.substring(rand_val, rand_val + 1);
+  }
+  document.getElementById("input").value = password;
+}
+
+function copyPassword() {
+  let copyPassword = document.getElementById("input");
+  copyPassword.select();
+  document.execCommand("copy");
+} -->
