@@ -19,3 +19,13 @@ function PasswordCopy() {
   val.select();
   document.execCommand("copy");
 }
+
+function ClearStuff() {
+  location.reload();
+}
+
+const sharebtn = document.getElementById("share");
+const sharebx = document.getElementById("sharebox");
+sharebtn.addEventListener("click", () => {
+  sharebx.classList.toggle("active");
+});
