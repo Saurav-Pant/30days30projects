@@ -45,8 +45,8 @@ loadQuiz();
 function loadQuiz() {
   const ques = document.getElementById("ques");
   const currentQuesData = myQuestions[currentQues];
-
   ques.innerText = currentQuesData.question;
+
   const a_text = document.getElementById("opt_1");
   const b_text = document.getElementById("opt_2");
   const c_text = document.getElementById("opt_3");
@@ -54,29 +54,23 @@ function loadQuiz() {
   a_text.innerText = currentQuesData.a;
   b_text.innerText = currentQuesData.b;
   c_text.innerText = currentQuesData.c;
+  mainStuff();
 }
 
-function getSelected() {
-  const ansEls = document.querySelectorAll(".ans");
-  let answer = undefined;
-  ansEls.forEach((ans) => {
-    if (ans.checked) {
-      answer = ans.id;
-    }
-  });
-  return answer;
-}
+function mainStuff() {
+  const btn = document.getElementById("btn");
+  btn.addEventListener("click", () => {
+    const DoCheck = document.querySelectorAll(".ans");
+    DoCheck.forEach((check) => {
+      if (check.checked) {
+        currentQues++;
+      }
+    });
 
-const btn = document.getElementById("btn");
-btn.addEventListener("click", () => {
-  const answer1 = getSelected();
-  console.log(answer1);
-  if (answer1) {
-    currentQues++;
     if (currentQues < myQuestions.length) {
       loadQuiz();
     } else {
       alert("You Finished the quiz");
     }
-  }
-});
+  });
+}
