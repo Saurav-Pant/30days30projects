@@ -69,9 +69,9 @@ function getSelected() {
 
 const btn = document.getElementById("btn");
 btn.addEventListener("click", () => {
-  const answer = getSelected();
-  console.log(answer);
-  if (answer) {
+  const answer1 = getSelected();
+  console.log(answer1);
+  if (answer1) {
     currentQues++;
     if (currentQues < myQuestions.length) {
       loadQuiz();
