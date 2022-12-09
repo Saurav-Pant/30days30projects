@@ -8,7 +8,7 @@ const fetchData = async () => {
     https://api.weatherapi.com/v1/current.json?key=081effa86a7e4d4b88210535220912&q=${target}`;
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
+  console.log(location.name);
 };
 
 const updateThing = () => {};
